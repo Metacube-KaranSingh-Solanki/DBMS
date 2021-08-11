@@ -1,8 +1,9 @@
 USE storefront;
 
 #2.1
-SELECT id, name, category_id, price FROM product
-WHERE stock > 0
+SELECT p.id, p.name, q.name "Category", p.price FROM product p JOIN category q
+ON p.category_id = q.id
+WHERE p.stock > 0
 ORDER BY id DESC;
 
 #2.2
