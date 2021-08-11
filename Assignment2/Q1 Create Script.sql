@@ -5,7 +5,7 @@ USE storefront;
 # 1.1 Creating all tables
 CREATE TABLE user (
     id INT auto_increment PRIMARY KEY,
-    name VARCHAR(20) NOT NULL,
+    name VARCHAR(200) NOT NULL,
     contact VARCHAR(10),
     role VARCHAR(15) NOT NULL CHECK (role IN ('Shopper', 'Administrator'))
 );
