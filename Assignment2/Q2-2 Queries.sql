@@ -27,4 +27,4 @@ WHERE category_id IN
 
 #2.6
 SELECT id, name, stock FROM product
-WHERE stock > 5;
+WHERE stock < 5;
