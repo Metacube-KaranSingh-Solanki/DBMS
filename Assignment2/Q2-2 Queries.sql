@@ -18,8 +18,8 @@ ORDER BY parent_category, c.name;
 
 #2.4
 SELECT id, name FROM category
-WHERE id IN 
-(SELECT id from category WHERE parent_id IS NOT NULL);
+WHERE id NOT IN
+(SELECT parent_id from category WHERE parent_id IS NOT NULL);
 
 #2.5
 SELECT id, name, price, description, category_id FROM product
