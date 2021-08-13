@@ -1,0 +1,40 @@
+Constraints used in the tables of Storefront
+
+1.) User
+	-Primary Key
+	-Not Null
+	-Check
+
+2.) Category
+	-Primary Key
+	-Not Null
+	-Foreign Key
+
+3.) Product
+	-Primary Key
+	-Not Null
+	-Default
+
+4.) Image
+	-Not Null
+	-Foreign Key
+
+5.) Address
+	-Primary Key
+	-Not Null
+	-Foreign Key
+
+6.) User_Order
+	-Primary Key
+	-Not Null
+	-Check
+	-Foreign Key
+
+7.) Product_Category
+	-Foreign Key
+
+8.) Item
+	-Primary Key
+ 	-Check
+	-Not Null
+	-Foreign Key
