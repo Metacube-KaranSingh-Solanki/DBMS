@@ -62,9 +62,11 @@ WHERE c.name LIKE "Smartphones";
 
 
 #3.7 Display top 2 Items which were cancelled most.
-SELECT DISTINCT p.name
+SELECT p.name, count(i.product_id)
 FROM product p
 JOIN item i
 ON i.product_id = p.id
 WHERE i.status = 'Cancelled'
+GROUP BY i.product_id
+ORDER BY count(p.id) DESC
 LIMIT 2;
