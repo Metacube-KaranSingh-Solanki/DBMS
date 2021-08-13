@@ -17,7 +17,7 @@ ORDER BY o.date DESC);
 
 #5.2 Use the above view to display the Products(Items) which are in ‘shipped’ state.
 SELECT Product_Name as Item FROM displayDetails
-WHERE status= 'Shipped';
+WHERE status = 'Shipped';
 
 #5.3 Use the above view to display the top 5 most selling products.
 SELECT Product_Name, count(id) as count
