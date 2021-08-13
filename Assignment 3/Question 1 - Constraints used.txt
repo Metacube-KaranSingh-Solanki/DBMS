@@ -1,7 +1,0 @@
--- Constraints used in the tables
--- Primary Key
--- Not Null
--- Default
--- Unique
--- Check
--- Foreign Key
