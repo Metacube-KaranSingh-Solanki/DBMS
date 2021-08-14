@@ -9,7 +9,8 @@ DELIMITER $$
 CREATE PROCEDURE get_average_sales(month INT, year INT)
 BEGIN
     
-    SELECT DATE_FORMAT(date, '%M') AS "Month", p.id, p.name, COUNT(i.quantity) Sales
+    SELECT DATE_FORMAT(date, '%M') AS "Month", p.id, p.name, 
+    ROUND( SUM(i.quantity * p.price) / DAY( LAST_DAY( u.date ) ),1 ) as average_sales
     FROM user_order o JOIN item i
     ON o.id = i.order_id
     JOIN product p
